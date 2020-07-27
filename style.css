@@ -86,15 +86,17 @@ header nav ul {
   letter-spacing: 1px;
 }
 .skills #skills-div {
-  width: 50%;
+  width: 60%;
   margin: 1em auto;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-flow: wrap;
+  align-items: center;
 }
 .skills #skills-div i {
   font-size: 2em;
+  margin: 5px;
 }
 .skills #skills-div .skill-tag {
   font-family: "Titillium Web", sans-serif;
@@ -103,6 +105,7 @@ header nav ul {
   font-size: 1em;
   padding: 3px 5px;
   border-radius: 3px;
+  margin: 5px 5px;
 }
 
 #coming-soon {
@@ -110,6 +113,12 @@ header nav ul {
   margin: 5em auto;
   text-align: center;
   font-size: 3em;
+}
+
+@media screen and (max-width: 500px) {
+  .skills #skills-div {
+    width: 95%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
