@@ -12,10 +12,11 @@ body {
 
 h1, h2, h3, h4, h5, h6, a, li, p {
   font-family: "Montserrat", sans-serif;
+  color: #212529;
 }
 
 #top-right {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: -1;
@@ -23,7 +24,7 @@ h1, h2, h3, h4, h5, h6, a, li, p {
 
 #bottom-left {
   z-index: -1;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
 }
@@ -39,7 +40,7 @@ header #name {
   text-decoration: none;
   font-size: 2em;
   letter-spacing: 2px;
-  color: #7e7e7e;
+  color: #212529;
   transition: ease-in-out 1s letter-spacing;
 }
 header #name:hover {
@@ -54,18 +55,54 @@ header nav ul {
   justify-content: space-between;
 }
 
-#github-link {
+#github-link, #linkedin-link {
   position: absolute;
   top: 20px;
-  left: 20px;
 }
-#github-link a {
+#github-link a, #linkedin-link a {
   font-size: 1.3em;
-  color: #7e7e7e;
+  color: #212529;
   cursor: pointer;
 }
-#github-link a:hover {
+#github-link a:hover, #linkedin-link a:hover {
   color: #616161;
+}
+
+#github-link {
+  left: 20px;
+}
+
+#linkedin-link {
+  right: 20px;
+}
+
+.skills {
+  width: 100%;
+  text-align: center;
+}
+.skills h2 {
+  margin: 1.4em 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.skills #skills-div {
+  width: 50%;
+  margin: 1em auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+}
+.skills #skills-div i {
+  font-size: 2em;
+}
+.skills #skills-div .skill-tag {
+  font-family: "Titillium Web", sans-serif;
+  background-color: #212529;
+  color: white;
+  font-size: 1em;
+  padding: 3px 5px;
+  border-radius: 3px;
 }
 
 #coming-soon {

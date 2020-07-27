@@ -1,5 +1,5 @@
 $background-colour:#e8e8e8;
-$header-font-colour:#7e7e7e;
+$header-font-colour:#212529;
 $header-font-colour-hover:#616161;
 
 *{
@@ -16,10 +16,11 @@ body{
 
 h1, h2, h3, h4, h5, h6, a, li, p{
     font-family: 'Montserrat', sans-serif;
+    color:$header-font-colour
 }
 
 #top-right{
-    position: absolute;
+    position: fixed;
     top:0;
     right:0;
     z-index: -1;
@@ -27,7 +28,7 @@ h1, h2, h3, h4, h5, h6, a, li, p{
 
 #bottom-left{
     z-index: -1;
-    position: absolute;
+    position: fixed;
     bottom:0;
     left:0;
 }
@@ -61,16 +62,52 @@ header{
     }
 }
 
-#github-link{
+#github-link, #linkedin-link{
     position: absolute;
     top:20px;
-    left:20px;
     a{
         font-size: 1.3em;
         color: $header-font-colour;
         cursor: pointer;
         &:hover{
             color: $header-font-colour-hover;
+        }
+    }
+}
+#github-link{
+    left:20px;
+}
+#linkedin-link{
+    right:20px;
+}
+
+.skills{
+    width:100%;
+    text-align: center;
+    h2{
+        margin: 1.4em 0;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+    #skills-div{
+        width:50%;
+        margin: 1em auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-flow: wrap;
+
+        i{
+            font-size: 2em;
+        }
+
+        .skill-tag{
+            font-family: 'Titillium Web', sans-serif;
+            background-color: $header-font-colour;
+            color:white;
+            font-size: 1em;
+            padding:3px 5px;
+            border-radius: 3px;
         }
     }
 }
