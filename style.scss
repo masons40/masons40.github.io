@@ -1,0 +1,83 @@
+$background-colour:#e8e8e8;
+$header-font-colour:#7e7e7e;
+$header-font-colour-hover:#616161;
+
+*{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    width:100%;
+    background-color: $background-colour;
+}
+
+h1, h2, h3, h4, h5, h6, a, li, p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#top-right{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: -1;
+}
+
+#bottom-left{
+    z-index: -1;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+
+header{
+    width:50%;
+    margin: 0em auto;
+    margin-top: 5em;
+    text-align: center;
+
+    #name{
+        font-weight: 100;
+        text-decoration: none;
+        font-size: 2em;
+        letter-spacing: 2px;
+        color: $header-font-colour;
+        transition: ease-in-out 1s letter-spacing;
+
+        &:hover{
+            letter-spacing: 5px;
+        }
+    }
+
+    nav{
+        width:50%;
+        margin: 1.3em auto;
+        ul{
+            display:flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+#github-link{
+    position: absolute;
+    top:20px;
+    left:20px;
+    a{
+        font-size: 1.3em;
+        color: $header-font-colour;
+        cursor: pointer;
+        &:hover{
+            color: $header-font-colour-hover;
+        }
+    }
+}
+
+#coming-soon{
+    width:100%;
+    margin: 5em auto;
+    text-align: center;
+    font-size: 3em;
+}
