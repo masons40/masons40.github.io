@@ -1,0 +1,796 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, a, li, p {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: white;
+  font-weight: 600;
+}
+
+a, li, p, button {
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  width: 40%;
+}
+.logo a {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.logo a img {
+  width: 8%;
+  margin-right: 10px;
+}
+.logo a h4 {
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.vanilla-bg {
+  background-color: #fcd590;
+}
+
+.strawberry-bg {
+  background-color: #f0afb3;
+}
+
+.chocolate-bg {
+  background-color: #b18378;
+}
+
+.peach-bg {
+  background-color: #fdc1a9;
+}
+
+.cart {
+  position: relative;
+  cursor: pointer;
+  transition: ease 1s transform;
+}
+.cart:hover {
+  transform: scale(1.05);
+}
+.cart .cart-number {
+  padding: 2px 5px;
+  border-radius: 100px;
+  background-color: #00a0d5;
+  font-size: 0.6em;
+  margin-left: 3px;
+}
+
+header {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  background-color: #40c4f8;
+  top: 0;
+  z-index: 100;
+}
+header #nav-toggle {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 110;
+}
+header #nav-toggle {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+header #nav-toggle span, header #nav-toggle span:before, header #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 35px;
+  position: absolute;
+  display: block;
+  background-color: white;
+  content: "";
+}
+header #nav-toggle span:before {
+  top: -10px;
+}
+header #nav-toggle span:after {
+  bottom: -10px;
+}
+header #nav-toggle span, header #nav-toggle span:before, header #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+header #nav-toggle.active span {
+  background-color: transparent;
+}
+header #nav-toggle.active span:before, header #nav-toggle.active span:after {
+  top: 0;
+}
+header #nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+header #nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+header nav {
+  display: block;
+  width: 35%;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav ul li {
+  font-size: 0.9em;
+}
+
+#top-layer {
+  position: relative;
+  background: radial-gradient(#b2d6f9, #00baf7);
+}
+#top-layer #text-area {
+  width: 30%;
+  margin: 0em 0 0 9em;
+  padding-bottom: 17rem;
+  padding-top: 10rem;
+}
+#top-layer #text-area h1 {
+  font-size: 3em;
+  font-weight: 100;
+  line-height: 45px;
+}
+#top-layer #text-area h2 {
+  font-size: 2.5em;
+  font-weight: 100;
+  line-height: 45px;
+}
+#top-layer #text-area h4 {
+  font-size: 1.5em;
+  font-weight: 100;
+  line-height: 25px;
+}
+#top-layer #text-area #menu-button {
+  margin: 1.4em 0;
+  padding: 12px;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  outline: none;
+  background-color: #00a0d5;
+  width: 50%;
+  text-align: center;
+  transition: ease 1s transform;
+}
+#top-layer #text-area #menu-button:hover {
+  transform: scale(1.5);
+}
+#top-layer #icecream-image {
+  width: 25%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#top-layer #bubble-image {
+  padding-top: 5em;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  color: #5d5d5d;
+  margin: 4em 0;
+}
+
+#menu-layer {
+  position: relative;
+}
+#menu-layer #menu-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  margin-top: 13rem;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 0;
+}
+#menu-layer #menu-row .menu-item {
+  width: 35%;
+  position: relative;
+  border-radius: 17px;
+  text-align: center;
+  margin-top: 15rem;
+  z-index: 50;
+}
+#menu-layer #menu-row .menu-item img {
+  margin-top: -13em;
+  width: 100%;
+}
+#menu-layer #menu-row .menu-item h2 {
+  margin: 1em 0;
+  font-size: 1.1em;
+}
+#menu-layer #menu-row .menu-item p {
+  width: 60%;
+  margin: 0 auto;
+}
+#menu-layer #menu-row .menu-item button {
+  border-radius: 100px;
+  padding: 10px 12px;
+  border: none;
+  margin: 2em 0;
+  cursor: pointer;
+  color: white;
+}
+#menu-layer #menu-row #strawberry-icecream {
+  background-color: #f0afb3;
+}
+#menu-layer #menu-row #strawberry-icecream button {
+  background-color: #ee9297;
+}
+#menu-layer #menu-row #chocolate-icecream {
+  background-color: #b18378;
+}
+#menu-layer #menu-row #chocolate-icecream button {
+  background-color: #82564e;
+}
+#menu-layer #menu-row #vanilla-icecream {
+  background-color: #fcd590;
+}
+#menu-layer #menu-row #vanilla-icecream button {
+  background-color: #fedc7b;
+}
+#menu-layer #menu-row #peach-icecream {
+  background-color: #fdc1a9;
+}
+#menu-layer #menu-row #peach-icecream button {
+  background-color: #feaf83;
+}
+#menu-layer #menu-image-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+#menu-layer #menu-image-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+#about-us {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#about-us .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transform: rotateZ(-5deg);
+}
+#about-us .row div {
+  width: 50%;
+  text-align: center;
+}
+#about-us .row div p, #about-us .row div h1 {
+  color: #5d5d5d;
+  width: 60%;
+  margin: 0 auto;
+  transform: rotateZ(5deg);
+}
+#about-us .row div h1 {
+  font-size: 2.2em;
+}
+#about-us .row div button {
+  background-color: #00a0d5;
+  margin: 1em 0;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  transform: rotateZ(5deg);
+}
+#about-us .row img {
+  width: 30%;
+}
+#about-us #cofounders-box {
+  display: none;
+}
+#about-us #cofounders-box #cofounders {
+  margin: 18vh 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#about-us #cofounders-box #cofounders .employee-box {
+  width: 15%;
+  margin: 0 1em;
+  background-color: #00a0d5;
+  padding: 2em 0;
+  transform: rotateZ(5deg);
+}
+#about-us #cofounders-box #cofounders .employee-box h1 {
+  font-size: 0.9em;
+  margin-top: 1em;
+  color: white;
+  transform: rotateZ(-5deg);
+}
+#about-us #cofounders-box #cofounders .employee-box h3 {
+  color: white;
+  transform: rotateZ(-5deg);
+}
+#about-us #cofounders-box #cofounders img {
+  border-radius: 100px;
+  transform: rotateZ(-5deg);
+}
+#about-us #cofounders-box #cofounders .large-circle {
+  width: 150px;
+  height: 150px;
+}
+#about-us #cofounders-box #cofounders .medium-circle {
+  width: 110px;
+  height: 110px;
+}
+#about-us #cofounders-box #cofounders .small-circle {
+  width: 90px;
+  height: 90px;
+}
+
+#locations .location-box, #locations .location-box-half {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#locations .location-box .shop-location, #locations .location-box-half .shop-location {
+  width: 100%;
+  text-align: center;
+  box-shadow: inset 0px 0px 10px 190px #0000009e;
+  padding: 7em 0;
+  color: white;
+}
+#locations .location-box-half {
+  grid-template-columns: 1fr 1fr;
+}
+#locations .dublin {
+  background-image: url(images/dublin_square.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#locations .galway {
+  background-image: url(images/galway_square.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#locations .cork {
+  background-image: url(images/cork_square.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#locations .kilkenny {
+  background-image: url(images/kilkenny_square.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer {
+  width: 100%;
+  background: radial-gradient(#b2d6f9, #00baf7);
+  position: relative;
+}
+footer #footer-clouds {
+  width: 100%;
+  position: absolute;
+  top: -5px;
+  z-index: 1;
+}
+footer h5 {
+  text-align: center;
+  padding: 2em 0;
+}
+footer .logo img {
+  width: 15%;
+}
+footer #main-section {
+  display: flex;
+  padding-top: 14em;
+  z-index: 4;
+}
+footer #footer-information-section {
+  width: 100%;
+}
+footer #footer-information-section #footer-media {
+  display: flex;
+  margin: 1.5em 0;
+  width: 100%;
+  justify-content: flex-end;
+}
+footer #footer-information-section #footer-media i {
+  font-size: 1.5em;
+  margin: 0 1em;
+  color: white;
+}
+footer #footer-information-section #footer-info {
+  display: flex;
+  justify-content: flex-end;
+}
+footer #footer-information-section #footer-info .info-box {
+  margin: 0 1em;
+  text-align: right;
+}
+footer #footer-information-section #footer-info .info-box i {
+  font-size: 0.7em;
+  margin: 0 0.2em;
+}
+
+#overlay-trolley {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: #16252bbd;
+  overflow: scroll;
+  z-index: 200;
+}
+#overlay-trolley .cross {
+  margin: 2em;
+  float: right;
+  color: white;
+  font-size: 1.7em;
+  cursor: pointer;
+}
+#overlay-trolley #trolley-area {
+  width: 55%;
+  margin: 2em auto;
+  background-color: white;
+  padding: 1em;
+  border-radius: 12px;
+}
+#overlay-trolley #trolley-area h2 {
+  color: #5d5d5d;
+}
+#overlay-trolley #trolley-area #trolley-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#overlay-trolley #trolley-area #trolley-header img {
+  width: 8%;
+}
+#overlay-trolley #trolley-area #trolley-header h2 {
+  color: #5d5d5d;
+}
+#overlay-trolley #trolley-area #checkout-items .checkout-item {
+  width: 100%;
+  border-radius: 4px;
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+}
+#overlay-trolley #trolley-area #checkout-items .checkout-item img {
+  width: 70px;
+  margin: 0.8em;
+}
+#overlay-trolley #trolley-area #checkout-items .checkout-item .checkout-item-info {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#overlay-trolley #trolley-area #checkout-items .checkout-item .checkout-item-info i {
+  font-size: 1.3em;
+  color: white;
+  cursor: pointer;
+  transition: ease 1s transform;
+}
+#overlay-trolley #trolley-area #checkout-items .checkout-item .checkout-item-info i:hover {
+  transform: scale(1.05);
+}
+#overlay-trolley #trolley-area #checkout-location-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1em 0;
+}
+#overlay-trolley #trolley-area #checkout-location-box .checkout-location {
+  background-color: #00a0d5;
+  padding: 5px 12px;
+  border-radius: 50px;
+  margin-right: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: ease 1s transform;
+}
+#overlay-trolley #trolley-area #checkout-location-box .checkout-location:hover {
+  transform: scale(1.05);
+}
+#overlay-trolley #trolley-area #checkout-location-box .checkout-location h4 {
+  font-size: 0.9em;
+}
+#overlay-trolley #trolley-area #checkout-button {
+  width: 20%;
+  text-align: center;
+  background-color: #00d5b8;
+  float: right;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 60%;
+  }
+  .logo a img {
+    width: 15%;
+  }
+  .logo a h4 {
+    font-size: 0.9em;
+  }
+
+  header {
+    padding: 0;
+  }
+  header #nav-toggle {
+    display: block;
+  }
+  header nav {
+    display: none;
+    width: 100%;
+  }
+  header nav ul {
+    display: block;
+  }
+  header nav ul li {
+    width: 100%;
+    font-size: 1.1em;
+    margin: 1.3em 0;
+    text-align: center;
+  }
+
+  #top-layer {
+    position: relative;
+    background: radial-gradient(#b2d6f9, #00baf7);
+  }
+  #top-layer #text-area {
+    width: 70%;
+    margin: 0em 0 0 1em;
+    padding-bottom: 10rem;
+    padding-top: 2rem;
+  }
+  #top-layer #text-area h1 {
+    font-size: 3em;
+  }
+  #top-layer #text-area h2 {
+    font-size: 1.5em;
+  }
+  #top-layer #text-area #menu-button:hover {
+    transform: scale(1.05);
+  }
+  #top-layer #icecream-image {
+    width: 45%;
+  }
+
+  #about-us .row {
+    flex-flow: wrap;
+    transform: rotateZ(0deg);
+  }
+  #about-us .row div {
+    width: 100%;
+    text-align: center;
+  }
+  #about-us .row div p, #about-us .row div h1 {
+    margin: 1em auto;
+    transform: rotateZ(0deg);
+  }
+  #about-us .row div button {
+    transform: rotateZ(0deg);
+  }
+  #about-us .row img {
+    width: 70%;
+  }
+  #about-us #cofounders-box {
+    display: none;
+  }
+  #about-us #cofounders-box #cofounders {
+    margin: 8vh 0;
+    flex-flow: wrap;
+  }
+  #about-us #cofounders-box #cofounders .employee-box {
+    width: 90%;
+    background-color: white;
+    transform: rotateZ(0deg);
+  }
+  #about-us #cofounders-box #cofounders .employee-box h1 {
+    color: #5d5d5d;
+    transform: rotateZ(0deg);
+  }
+  #about-us #cofounders-box #cofounders .employee-box h3 {
+    color: #5d5d5d;
+    transform: rotateZ(0deg);
+  }
+  #about-us #cofounders-box #cofounders img {
+    transform: rotateZ(0deg);
+  }
+
+  #locations .location-box, #locations .location-box-half, #locations .location-box-full {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #locations .location-box .shop-location, #locations .location-box-half .shop-location, #locations .location-box-full .shop-location {
+    width: 100%;
+    text-align: center;
+    box-shadow: inset 0px 0px 10px 190px #0000009e;
+    padding: 7em 0;
+    color: white;
+  }
+  #locations .location-box-full {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #locations .cork {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #menu-layer #menu-row {
+    margin-top: 0rem;
+    width: 100%;
+  }
+  #menu-layer #menu-row .menu-item {
+    width: 85%;
+    margin-top: 8rem;
+  }
+  #menu-layer #menu-row .menu-item img {
+    margin-top: -8em;
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+  }
+  footer #footer-clouds {
+    width: 100%;
+    position: absolute;
+    top: -5px;
+    z-index: 1;
+  }
+  footer h5 {
+    padding: 1em 0;
+  }
+  footer .logo {
+    width: 100%;
+  }
+  footer .logo a {
+    justify-content: center;
+  }
+  footer .logo img {
+    width: 15%;
+  }
+  footer #main-section {
+    display: block;
+    padding-top: 6em;
+    z-index: 4;
+  }
+  footer #footer-information-section #footer-media {
+    justify-content: center;
+  }
+  footer #footer-information-section #footer-info {
+    justify-content: center;
+  }
+  footer #footer-information-section #footer-info .info-box {
+    text-align: center;
+  }
+
+  #overlay-trolley {
+    overflow: scroll;
+  }
+  #overlay-trolley .cross {
+    margin: 0.8em;
+  }
+  #overlay-trolley #trolley-area {
+    width: 85%;
+    margin: 3.2em auto;
+  }
+  #overlay-trolley #trolley-area #trolley-header img {
+    width: 14%;
+  }
+  #overlay-trolley #trolley-area #checkout-items .checkout-item img {
+    width: 50px;
+  }
+  #overlay-trolley #trolley-area #checkout-items .checkout-item .checkout-item-info {
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    padding: 0.5em;
+    text-align: center;
+  }
+  #overlay-trolley #trolley-area #checkout-items .checkout-item .checkout-item-info h3 {
+    font-size: 0.9em;
+  }
+  #overlay-trolley #trolley-area #checkout-items .checkout-item .checkout-item-info i {
+    width: 33%;
+    font-size: 1em;
+  }
+  #overlay-trolley #trolley-area #checkout-location-box {
+    justify-content: space-evenly;
+    flex-flow: wrap;
+  }
+  #overlay-trolley #trolley-area #checkout-location-box .checkout-location {
+    margin: 0.5em 5px;
+  }
+  #overlay-trolley #trolley-area #checkout-button {
+    width: 40%;
+    text-align: center;
+    background-color: #00d5b8;
+    float: right;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 800px) {
+  #top-layer #icecream-image {
+    width: 45%;
+  }
+
+  #menu-layer #menu-row {
+    margin-top: 0rem;
+    width: 90%;
+  }
+  #menu-layer #menu-row .menu-item {
+    width: 65%;
+    margin-top: 8rem;
+  }
+  #menu-layer #menu-row .menu-item img {
+    margin-top: -8em;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

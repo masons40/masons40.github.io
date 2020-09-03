@@ -7,7 +7,7 @@
 
 body {
   width: 100%;
-  background-color: #e8e8e8;
+  background-color: #fdfdfd;
 }
 
 h1, h2, h3, h4, h5, h6, a, li, p {
@@ -29,9 +29,13 @@ h1, h2, h3, h4, h5, h6, a, li, p {
   left: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   width: 50%;
-  margin: 0em auto;
+  margin: 0.7em auto;
   margin-top: 1em;
   text-align: center;
 }
@@ -119,6 +123,18 @@ header nav ul {
   padding: 3px 5px;
   border-radius: 3px;
   margin: 5px 5px;
+}
+
+#portfolio-area {
+  width: 80%;
+  margin: 1em auto;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: wrap;
+  flex-wrap: wrap;
+}
+#portfolio-area .card {
+  margin: 1em 0.5em;
 }
 
 #coming-soon {

@@ -1,4 +1,4 @@
-$background-colour:#e8e8e8;
+$background-colour:#fdfdfd;
 $header-font-colour:#212529;
 $header-font-colour-hover:#616161;
 
@@ -32,11 +32,14 @@ h1, h2, h3, h4, h5, h6, a, li, p{
     bottom:0;
     left:0;
 }
+a{
+    text-decoration: none;
+}
 
 
 header{
     width:50%;
-    margin: 0em auto;
+    margin: 0.7em auto;
     margin-top: 1em;
     text-align: center;
     #logo{
@@ -126,6 +129,19 @@ header{
             border-radius: 3px;
             margin: 5px 5px;
         }
+    }
+}
+
+#portfolio-area{
+    width:80%;
+    margin: 1em auto;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+
+    .card{
+        margin: 1em 0.5em;
     }
 }
 
