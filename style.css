@@ -127,14 +127,37 @@ header nav ul {
 
 #portfolio-area {
   width: 80%;
-  margin: 1em auto;
+  margin: 5em auto;
   display: flex;
   flex-flow: wrap;
   flex-direction: wrap;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 #portfolio-area .card {
+  width: 45%;
   margin: 1em 0.5em;
+  position: relative;
+}
+#portfolio-area .card .card-img-top {
+  background-color: #212529;
+}
+#portfolio-area .card .card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+  background-color: #212529e3;
+}
+#portfolio-area .card .card-body, #portfolio-area .card .card-title, #portfolio-area .card .card-text {
+  color: white;
+}
+#portfolio-area .card .skills #skills-div {
+  width: 100%;
+}
+#portfolio-area .card:hover .card-body {
+  display: block;
 }
 
 #coming-soon {
@@ -144,7 +167,7 @@ header nav ul {
   font-size: 3em;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .skills #skills-div {
     width: 95%;
   }
@@ -157,6 +180,61 @@ header nav ul {
   }
   header nav ul li {
     margin: 0 10px;
+  }
+
+  #portfolio-area {
+    width: 80%;
+    margin: 5em auto;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  #portfolio-area .card {
+    width: 45%;
+    height: fit-content;
+    margin: 1em 0.5em;
+    position: relative;
+  }
+  #portfolio-area .card .card-img-top {
+    background-color: #212529;
+  }
+  #portfolio-area .card .card-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
+    background-color: #212529e3;
+  }
+  #portfolio-area .card .card-body, #portfolio-area .card .card-title, #portfolio-area .card .card-text {
+    color: white;
+  }
+  #portfolio-area .card .skills #skills-div {
+    width: 100%;
+  }
+  #portfolio-area .card:hover .card-body {
+    display: block;
+  }
+}
+@media screen and (max-width: 550px) {
+  #portfolio-area {
+    width: 90%;
+  }
+  #portfolio-area .card {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 300px) {
+  #portfolio-area {
+    width: 90%;
+  }
+  #portfolio-area .card {
+    width: 95%;
+  }
+  #portfolio-area .card .card-text {
+    display: none;
   }
 }
 

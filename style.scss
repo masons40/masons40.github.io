@@ -1,6 +1,9 @@
 $background-colour:#fdfdfd;
 $header-font-colour:#212529;
 $header-font-colour-hover:#616161;
+$card-text-colour: white;
+$card-hover: #212529e3;
+
 
 *{
     margin:0;
@@ -134,14 +137,46 @@ header{
 
 #portfolio-area{
     width:80%;
-    margin: 1em auto;
+    margin: 5em auto;
     display: flex;
     flex-flow: wrap;
     flex-direction: wrap;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
     .card{
+        width:45%;
         margin: 1em 0.5em;
+        position: relative;
+        
+        .card-img-top{
+            background-color: $header-font-colour;
+        }
+        
+        .card-body{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 100%;
+            display: none;
+            background-color: $card-hover;
+        }
+        
+        .card-body, .card-title, .card-text{
+            color: $card-text-colour;
+        }
+        
+        .skills{
+            #skills-div{
+                width:100%;
+            }
+        }
+        
+        &:hover {
+            .card-body{
+                display: block;
+            }
+        }
     }
 }
 
@@ -152,7 +187,7 @@ header{
     font-size: 3em;
 }
 
-$small: 500px;
+$small: 800px;
 
 @media screen and (max-width: $small) {
     .skills{
@@ -174,4 +209,78 @@ $small: 500px;
             }
         }
     }
+    
+    
+    #portfolio-area{
+        width:80%;
+        margin: 5em auto;
+        display: flex;
+        flex-flow: wrap;
+        flex-direction: wrap;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        .card{
+            width:45%;
+            height: fit-content;
+            margin: 1em 0.5em;
+            position: relative;
+
+            .card-img-top{
+                background-color: $header-font-colour;
+            }
+
+            .card-body{
+                position: absolute;
+                top:0;
+                left:0;
+                height: 100%;
+                display: none;
+                background-color: $card-hover;
+            }
+
+            .card-body, .card-title, .card-text{
+                color: $card-text-colour;
+            }
+
+            .skills{
+                #skills-div{
+                    width:100%;
+                }
+            }
+
+            &:hover {
+                .card-body{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    
+}
+
+$mobile: 550px;
+@media screen and (max-width: $mobile) {
+    
+    #portfolio-area{
+        width:90%;
+        .card{
+            width:95%;
+        }
+    }  
+}
+
+$extra-mobile: 300px;
+@media screen and (max-width: $extra-mobile) {
+    
+    #portfolio-area{
+        width:90%;
+        .card{
+            width:95%;
+            .card-text{
+                display: none;
+            }
+        }
+    }  
 }
